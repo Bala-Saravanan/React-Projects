@@ -1,19 +1,19 @@
-import BannerImg from "./../assets/bannerImg.png";
+import PosterImg from "./../assets/poster.png";
 import Banner from "./Banner";
 
-const Hero = () => {
+const Poster = () => {
   return (
-    <div id="home" className="mt-24">
+    <>
       <Banner
-        heading={"Develop Your Skill without deligence"}
-        img={BannerImg}
+        heading={"Each Student can share their discount code for free"}
+        img={PosterImg}
         content={
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam incidunt laboriosam beatae itaque a sequi at facilis officiis distinctio."
         }
         button1={"Get Started"}
         button2={"Discount"}
       />
-    </div>
+    </>
   );
 };
-export default Hero;
+export default Poster;

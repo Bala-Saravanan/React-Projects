@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const nav_items = [
@@ -14,27 +15,29 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="sticky mx-5 flex items-center justify-between border-b border-gray-400 bg-backdrop-blur">
+      <div className="fixed z-50 top-0 min-w-full container mx-5 flex items-center justify-between border-b border-gray-400 bg-white">
         <div className="m-5 flex items-center space-x-3">
           <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-[#5839AD] to-[#59A3F9]"></div>
           <span className="font-bold text-2xl">XYZ</span>
         </div>
         <div>
-          <ul className="hidden sm:flex justify-center space-x-5 md:text-xl">
+          <ul className="hidden text-[#010851] font-semibold sm:flex justify-center space-x-5 md:text-xl cursor-pointer">
             {nav_items.map(({ link, path }, idx) => (
               <li key={idx}>
-                <a href={path}>{link}</a>
+                <Link spy={true} smooth={true} offset={-100} to={path}>
+                  {link}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <button className="hidden sm:block px-4 py-2 rounded-lg bg-[#9A7AF1] mx-5 hover:bg-[#8c59f9]">
+          <button className="hidden sm:block px-4 py-2 rounded-lg bg-[#9A7AF1] mx-10 hover:bg-[#8c59f9]">
             Sign Up
           </button>
         </div>
         <div
-          className="sm:hidden text-2xl cursor-pointer"
+          className=" sm:hidden text-2xl cursor-pointer mx-10"
           onClick={() => setIsToggleOpen(!isToggleOpen)}
         >
           {isToggleOpen ? <RxCross2 /> : <RxHamburgerMenu />}
@@ -42,12 +45,19 @@ const NavBar = () => {
       </div>
       <div>
         {isToggleOpen ? (
-          <div className="sm:hidden list-none bg-[#5839AD]  text-white">
+          <div className="fixed top-20 z-50 min-w-full sm:hidden list-none bg-[#5839AD]  text-white">
             {nav_items.map(({ link, path }, idx) => (
               <li key={idx} className="py-2 hover:bg-[#8c59f9]">
-                <a className="ms-5" href={path}>
+                <Link
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  className="ms-5"
+                  to={path}
+                  onClick={() => setIsToggleOpen(!isToggleOpen)}
+                >
                   {link}
-                </a>
+                </Link>
               </li>
             ))}
             <div className="flex justify-center pb-2">

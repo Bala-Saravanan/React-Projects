@@ -1,6 +1,15 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+
 const Cards = ({ image, title }) => {
   return (
-    <div className="m-10 border-none rounded-2xl shadow-2xl ring ring-gray-200">
+    <motion.div
+      variants={fadeIn("up", 0.7)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.7 }}
+      className="m-10 border-none rounded-2xl shadow-2xl ring ring-gray-200"
+    >
       <div className="p-10">
         <img src={image} alt={title} />
       </div>
@@ -9,7 +18,7 @@ const Cards = ({ image, title }) => {
           {title}
         </h2>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Cards;
