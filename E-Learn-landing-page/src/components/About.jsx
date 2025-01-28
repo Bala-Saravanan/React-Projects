@@ -33,7 +33,7 @@ const About = () => {
             aspernatur quas labore. Exercitationem neque iste quis hic
             reprehenderit consectetur in quos?
           </p>
-          <button className="bg-gradient-to-r from-[#5630c0] to-[#9a7af1] hover:bg-gradient-to-r hover:from-[#9a7af1] hover:to-[#5630c0] text-white md:text-2xl px-5 py-2 rounded-lg my-5">
+          <button className="text-white md:text-2xl px-5 py-2 rounded-lg my-5 bg-[#9A7AF1] hover:bg-[#8c59f9] transition-all duration-500 cursor-pointer">
             Get Started
           </button>
         </motion.div>

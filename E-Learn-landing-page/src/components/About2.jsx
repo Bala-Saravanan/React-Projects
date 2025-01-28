@@ -31,7 +31,7 @@ const About2 = () => {
           aliquam accusantium nulla sunt distinctio, provident minus qui animi
           maxime aperiam consectetur eos?
         </p>
-        <button className="bg-gradient-to-r from-[#5630c0] to-[#9a7af1] hover:bg-gradient-to-r hover:from-[#9a7af1] hover:to-[#5630c0] text-white md:text-2xl px-5 py-2 rounded-lg my-5">
+        <button className=" bg-[#9A7AF1] hover:bg-[#8c59f9] transition-all duration-500 cursor-pointer text-white md:text-2xl px-5 py-2 rounded-lg my-5">
           Get Started
         </button>
       </motion.div>

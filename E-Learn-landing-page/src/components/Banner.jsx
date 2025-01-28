@@ -26,10 +26,10 @@ const Banner = ({ heading, img, content, button1, button2 }) => {
             </h1>
             <p className="text-white my-8">{content}</p>
             <div className="flex space-x-5">
-              <button className="px-4 sm:px-8 py-2 text-white md:text-xl rounded-lg bg-[#9A7AF1] hover:bg-[#8c59f9]">
+              <button className="px-4 sm:px-8 py-2 text-white md:text-xl rounded-lg bg-[#9A7AF1] hover:bg-[#8c59f9] transition-all duration-500 cursor-pointer">
                 {button1}
               </button>
-              <button className="px-4 sm:px-8 py-2 text-white md:text-xl rounded-lg bg-[#9A7AF1] hover:bg-[#8c59f9]">
+              <button className="px-4 sm:px-8 py-2 text-white md:text-xl rounded-lg bg-[#9A7AF1] hover:bg-[#8c59f9] transition-all duration-500 cursor-pointer">
                 {button2}
               </button>
             </div>

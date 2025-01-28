@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="fixed z-50 top-0 min-w-full container mx-5 flex items-center justify-between border-b border-gray-400 bg-white">
+      <div className="fixed z-50 top-0 min-w-full container flex items-center justify-between border-b border-gray-400 bg-white">
         <div className="m-5 flex items-center space-x-3">
           <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-[#5839AD] to-[#59A3F9]"></div>
           <span className="font-bold text-2xl">XYZ</span>
@@ -32,7 +32,7 @@ const NavBar = () => {
           </ul>
         </div>
         <div>
-          <button className="hidden sm:block px-4 py-2 rounded-lg bg-[#9A7AF1] mx-10 hover:bg-[#8c59f9]">
+          <button className="hidden sm:block text-white px-4 py-2 rounded-lg mx-10 bg-[#9A7AF1] hover:bg-[#8c59f9] transition-all duration-500 cursor-pointer">
             Sign Up
           </button>
         </div>
