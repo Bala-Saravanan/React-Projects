@@ -6,7 +6,7 @@ const Price = () => {
   return (
     <div className="my-20" id="pricing">
       <div className="text-center  mx-2">
-        <h1 className="text-[#010851] text-4xl md:text-6xl font-bold mb-5">
+        <h1 className="text-primary text-4xl md:text-6xl font-bold mb-5">
           Here are all our Plans
         </h1>
         <p className="">
@@ -18,10 +18,10 @@ const Price = () => {
           <h2>Monthly</h2>
           <div
             onClick={() => setIsMonthly(!isMonthly)}
-            className="h-6 md:h-8 w-15 md:w-20 bg-gray-300 rounded-full relative"
+            className="h-6 md:h-8 w-15 md:w-20 bg-gray-300 rounded-full cursor-pointer relative"
           >
             <div
-              className={`absolute h-6 md:h-8 w-6 md:w-8 bg-[#9a7af1] rounded-full cursor-pointer ${
+              className={`absolute h-6 md:h-8 w-6 md:w-8 bg-secondary rounded-full cursor-pointer ${
                 isMonthly ? "" : "right-0"
               }`}
             ></div>

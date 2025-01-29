@@ -13,13 +13,13 @@ const Features = () => {
         id="feature"
       >
         <motion.div
-          variants={fadeIn("left", 0.7)}
+          variants={fadeIn("left", 0.3)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
           className="m-10"
         >
-          <h1 className="text-[#010851] font-semibold leading-12 text-3xl">
+          <h1 className="text-primary font-semibold leading-12 text-3xl">
             Why We Are Better Than Others
           </h1>
           <p className="my-5">

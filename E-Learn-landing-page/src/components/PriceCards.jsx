@@ -13,20 +13,20 @@ const PriceCards = ({ title, price }) => {
   return (
     <div className="m-5">
       <motion.div
-        variants={fadeIn("up", 0.7)}
+        variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
+        viewport={{ once: false, amount: 0.1 }}
         className="p-10 border-none rounded-xl shadow-xl ring ring-gray-400"
       >
-        <h1 className="text-[#010851] text-3xl font-bold text-center my-5">
+        <h1 className="text-primary text-3xl font-bold text-center my-5">
           {title}
         </h1>
         <p className="text-gray-500 text-center">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit numquam
           magni error necessitatibus iusto nobis!
         </p>
-        <h2 className="text-[#9a7af1] font-bold text-3xl text-center my-5">
+        <h2 className="text-secondary font-bold text-3xl text-center my-5">
           {price}
           <span className="text-xl text-gray-400">/month</span>
         </h2>
@@ -38,7 +38,7 @@ const PriceCards = ({ title, price }) => {
           ))}
         </ul>
         <div className="flex justify-center">
-          <button className="border text-[#9a7af1] font-semibold px-10 py-3 rounded-md my-10 hover:bg-[#9a7af1] hover:text-white transition-all duration-300 cursor-pointer">
+          <button className="border text-secondary font-semibold px-10 py-3 rounded-md my-10 hover:bg-hover hover:text-white transition-all duration-300 cursor-pointer">
             Get Started
           </button>
         </div>

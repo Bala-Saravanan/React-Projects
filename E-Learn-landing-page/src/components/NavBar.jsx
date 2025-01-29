@@ -21,9 +21,12 @@ const NavBar = () => {
           <span className="font-bold text-2xl">XYZ</span>
         </div>
         <div>
-          <ul className="hidden text-[#010851] font-semibold sm:flex justify-center space-x-5 md:text-xl cursor-pointer">
+          <ul className="hidden text-primary font-semibold sm:flex justify-center space-x-10 md:text-xl cursor-pointer">
             {nav_items.map(({ link, path }, idx) => (
-              <li key={idx}>
+              <li
+                key={idx}
+                className="hover:scale-120 transition-all duration-1000"
+              >
                 <Link spy={true} smooth={true} offset={-100} to={path}>
                   {link}
                 </Link>
@@ -32,7 +35,7 @@ const NavBar = () => {
           </ul>
         </div>
         <div>
-          <button className="hidden sm:block text-white px-4 py-2 rounded-lg mx-10 bg-[#9A7AF1] hover:bg-[#8c59f9] transition-all duration-500 cursor-pointer">
+          <button className="hidden sm:block text-white px-4 py-2 rounded-lg mx-10 bg-secondary hover:bg-hover transition-all duration-500 cursor-pointer">
             Sign Up
           </button>
         </div>
@@ -61,7 +64,7 @@ const NavBar = () => {
               </li>
             ))}
             <div className="flex justify-center pb-2">
-              <button className=" px-4 py-2 rounded-lg bg-[#9A7AF1] hover:bg-[#8c59f9]">
+              <button className=" px-4 py-2 rounded-lg bg-secondary hover:bg-hover">
                 Sign Up
               </button>
             </div>
